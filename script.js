@@ -3,7 +3,7 @@
                 subtitle: "Biojóias",
                 desc: "Peças únicas, feitas à mão com sementes e madeira.",
                 btnCatalog: "Ver Catálogo",
-                btnStore: "Loja Online",
+                btnStore: "Atendimento WhatsApp",
                 footer: "© 2026 Flor da Amazônia. Todos os direitos reservados."
             },
             en: {
