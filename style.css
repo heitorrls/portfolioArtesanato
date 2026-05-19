@@ -1,0 +1,177 @@
+/* Configurações Globais (Foco em Mobile First) */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(12, 141, 19, 0.589);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px 15px; /* Padding menor em celulares para aproveitar a tela */
+    min-height: 100vh;  /* Garante que ocupa 100% da altura da tela */
+    display: flex;
+    align-items: center;    /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* O Cartão Principal (Estilo Linktree) */
+.main-content {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px; /* No computador, ele não passa desse tamanho */
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2); /* Sombra mais bonita */
+}
+
+/* --- Botões de Idioma --- */
+.lang-toggle {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.lang-toggle button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    padding: 0;
+}
+
+.lang-toggle button:hover {
+    transform: scale(1.2);
+}
+
+/* --- Imagem e Textos --- */
+.img-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.img-logo:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    margin: 5px 0;
+    color: #222;
+    font-size: 26px;
+}
+
+h3 {
+    margin: 0;
+    color: #0c8d13;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.author {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 16px;
+    color: #444;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+/* --- Redes Sociais --- */
+nav {
+    margin: 25px 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.fa-instagram, .fa-whatsapp {
+    font-size: 38px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.fa-instagram { color: #E1306C; }
+.fa-instagram:hover { color: #C13584; transform: scale(1.15); }
+
+.fa-whatsapp { color: #25D366; }
+.fa-whatsapp:hover { color: #128C7E; transform: scale(1.15); }
+
+/* --- Botões Retangulares --- */
+.link-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    background-color: #0c8d13;
+    color: #ffffff;
+    padding: 16px; /* Área de clique grande, excelente para touch de celular */
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    background-color: #09680e;
+    transform: translateY(-2px); /* Efeito do botão subindo ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* --- Rodapé --- */
+footer {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #888;
+}
+
+/* =========================================================
+   MEDIA QUERIES - O segredo da responsividade
+   ========================================================= */
+
+/* Regra para celulares de tela muito pequena (ex: iPhone SE) */
+@media (max-width: 380px) {
+    .main-content {
+        padding: 20px 15px; /* Diminui as margens internas do cartão */
+    }
+    h2 { font-size: 22px; }
+    .img-logo { width: 100px; height: 100px; }
+    .btn { padding: 14px; font-size: 15px; } /* Botões um pouco menores */
+}
+
+/* Regra para telas de computadores e tablets */
+@media (min-width: 768px) {
+    body {
+        padding: 50px 20px;
+    }
+    .main-content {
+        padding: 40px 30px; /* Cartão ganha mais respiro interno no PC */
+    }
+    .btn:hover {
+        transform: scale(1.03); /* Zoom suave que fica melhor com o mouse */
+    }
+}
