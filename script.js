@@ -7,6 +7,7 @@
                 btnCatalog: "Instagram",
                 btnStore: "Atendimento WhatsApp",
                 btnPortfolio: "Portfólio",
+                btnLojaFisica: "Loja Física",
                 footer: "© 2026 Flor da Amazônia. Todos os direitos reservados."
             },
             en: {
@@ -17,6 +18,7 @@
                 btnCatalog: "Instagram",
                 btnStore: "WhatsApp Support",
                 btnPortfolio: "Portfolio",
+                btnLojaFisica: "Physical store",
                 footer: "© 2026 Flor da Amazônia. All rights reserved."
             }
         };
@@ -30,5 +32,6 @@
             document.getElementById('btn-catalog').innerText = translations[lang].btnCatalog;
             document.getElementById('btn-store').innerText = translations[lang].btnStore;
             document.getElementById('btn-portfolio').innerText = translations[lang].btnPortfolio;
+            document.getElementById('btn-lojaFisica').innerText = translations[lang].btnLojaFisica;
             document.getElementById('footer-text').innerText = translations[lang].footer;
         }
